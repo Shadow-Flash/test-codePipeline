@@ -1,0 +1,15 @@
+version = 0.1
+[default]
+[default.pipeline_bootstrap]
+[default.pipeline_bootstrap.parameters]
+pipeline_user = "arn:aws:iam::960351580303:user/aws-sam-cli-managed-dev-test-vg-pipel-PipelineUser-FWYVVR55TCR7"
+permissions_provider = "AWS IAM"
+
+[dev-test-vg]
+[dev-test-vg.pipeline_bootstrap]
+[dev-test-vg.pipeline_bootstrap.parameters]
+pipeline_execution_role = "arn:aws:iam::960351580303:role/aws-sam-cli-managed-dev-test-PipelineExecutionRole-CQ6EB964PSJA"
+cloudformation_execution_role = "arn:aws:iam::960351580303:role/aws-sam-cli-managed-dev-t-CloudFormationExecutionR-1PKHNEW3WWAUT"
+artifacts_bucket = "aws-sam-cli-managed-dev-test-vg-p-artifactsbucket-1vdqqlq0xvsj9"
+image_repository = ""
+region = "ap-south-1"
