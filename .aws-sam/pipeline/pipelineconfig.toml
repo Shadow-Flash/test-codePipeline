@@ -2,23 +2,23 @@ version = 0.1
 [default]
 [default.pipeline_bootstrap]
 [default.pipeline_bootstrap.parameters]
-pipeline_user = "arn:aws:iam::960351580303:user/aws-sam-cli-managed-cicd-dev-pipeline-PipelineUser-15JU6M579DER0"
+pipeline_user = "arn:aws:iam::960351580303:user/aws-sam-cli-managed-dev-vg-pipeline-r-PipelineUser-ZXO0LSX1OTQ1"
 permissions_provider = "AWS IAM"
 
-[cicd-dev]
-[cicd-dev.pipeline_bootstrap]
-[cicd-dev.pipeline_bootstrap.parameters]
-pipeline_execution_role = "arn:aws:iam::960351580303:role/aws-sam-cli-managed-cicd-dev-PipelineExecutionRole-13552AUY2ODPG"
-cloudformation_execution_role = "arn:aws:iam::960351580303:role/aws-sam-cli-managed-cicd-CloudFormationExecutionR-ZW07FEBFMIWX"
-artifacts_bucket = "aws-sam-cli-managed-cicd-dev-pipe-artifactsbucket-1sjnbeg00vkp3"
+[dev-vg]
+[dev-vg.pipeline_bootstrap]
+[dev-vg.pipeline_bootstrap.parameters]
+pipeline_execution_role = "arn:aws:iam::960351580303:role/aws-sam-cli-managed-dev-vg-p-PipelineExecutionRole-1TEXFHG14LLLB"
+cloudformation_execution_role = "arn:aws:iam::960351580303:role/aws-sam-cli-managed-dev-v-CloudFormationExecutionR-KHI2OGJPMI0Y"
+artifacts_bucket = "aws-sam-cli-managed-dev-vg-pipeli-artifactsbucket-1be881734ond5"
 image_repository = ""
 region = "ap-south-1"
 
-[cicd-prod]
-[cicd-prod.pipeline_bootstrap]
-[cicd-prod.pipeline_bootstrap.parameters]
-pipeline_execution_role = "arn:aws:iam::960351580303:role/aws-sam-cli-managed-cicd-pro-PipelineExecutionRole-1P02SAL4SACRW"
-cloudformation_execution_role = "arn:aws:iam::960351580303:role/aws-sam-cli-managed-cicd-CloudFormationExecutionR-17761SSYG3L60"
-artifacts_bucket = "aws-sam-cli-managed-cicd-prod-pip-artifactsbucket-9zfilsgjbq6n"
+[prod-vg]
+[prod-vg.pipeline_bootstrap]
+[prod-vg.pipeline_bootstrap.parameters]
+pipeline_execution_role = "arn:aws:iam::960351580303:role/aws-sam-cli-managed-prod-vg-PipelineExecutionRole-KQ77D8IG9L34"
+cloudformation_execution_role = "arn:aws:iam::960351580303:role/aws-sam-cli-managed-prod-CloudFormationExecutionR-2IXWZH05MOIE"
+artifacts_bucket = "aws-sam-cli-managed-prod-vg-pipel-artifactsbucket-5oq0mmvmled1"
 image_repository = ""
 region = "ap-south-1"
