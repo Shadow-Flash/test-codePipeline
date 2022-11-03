@@ -567,6 +567,13 @@ Resources:
       Source:
         Type: CODEPIPELINE
         BuildSpec: pipeline/buildspec_build_package.yml
+      ProjectTriggers:
+        Webhook: true
+        FilterGroups:
+          - Type: EVENT
+            Pattern: PUSH
+          - Type: BASE_REF
+            Pattern: !Sub ^refs/heads/main$
 
   CodeBuildProjectDeploy:
     Condition: IsMainBranchPipeline
@@ -582,6 +589,14 @@ Resources:
       Source:
         Type: CODEPIPELINE
         BuildSpec: pipeline/buildspec_deploy.yml
+      ProjectTriggers:
+        Webhook: true
+        FilterGroups:
+          - Type: EVENT
+            Pattern: PUSH
+          - Type: BASE_REF
+            Pattern: !Sub ^refs/heads/main$
+            
 Outputs:
   CodeStarConnectionArn:
     Condition: CreateConnection
