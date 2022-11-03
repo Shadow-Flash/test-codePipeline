@@ -431,10 +431,10 @@ Resources:
                     - IsFeatureBranchPipeline
                     - !GetAtt CodeBuildProjectBuildAndDeployFeature.Arn
                     - !Ref AWS::NoValue
-                  - !If
-                    - IsMainBranchPipeline
-                    - !GetAtt CodeBuildProjectBuildAndPackage.Arn
-                    - !Ref AWS::NoValue
+                  # - !If
+                  #   - IsMainBranchPipeline
+                  #   - !GetAtt CodeBuildProjectBuildAndPackage.Arn
+                  #   - !Ref AWS::NoValue
                   # Uncomment the following step for running the integration tests
                   # - !If
                   #   - IsMainBranchPipeline
