@@ -205,23 +205,23 @@ Resources:
                   - Name: SourceCodeAsZip
           - !Ref AWS::NoValue
 
-        - !If
-          - IsMainBranchPipeline
-          - Name: BuildAndPackage
-            Actions:
-              - Name: CodeBuild
-                ActionTypeId:
-                  Category: Build
-                  Owner: AWS
-                  Provider: CodeBuild
-                  Version: "1"
-                Configuration:
-                  ProjectName: !Ref CodeBuildProjectBuildAndPackage
-                InputArtifacts:
-                  - Name: SourceCodeAsZip
-                OutputArtifacts:
-                  - Name: BuildArtifactAsZip
-          - !Ref AWS::NoValue
+        # - !If
+        #   - IsMainBranchPipeline
+        #   - Name: BuildAndPackage
+        #     Actions:
+        #       - Name: CodeBuild
+        #         ActionTypeId:
+        #           Category: Build
+        #           Owner: AWS
+        #           Provider: CodeBuild
+        #           Version: "1"
+        #         Configuration:
+        #           ProjectName: !Ref CodeBuildProjectBuildAndPackage
+        #         InputArtifacts:
+        #           - Name: SourceCodeAsZip
+        #         OutputArtifacts:
+        #           - Name: BuildArtifactAsZip
+        #   - !Ref AWS::NoValue
 
         - !If
           - IsMainBranchPipeline
