@@ -2,14 +2,23 @@ version = 0.1
 [default]
 [default.pipeline_bootstrap]
 [default.pipeline_bootstrap.parameters]
-pipeline_user = "arn:aws:iam::960351580303:user/aws-sam-cli-managed-dev-test-vg-pipel-PipelineUser-FWYVVR55TCR7"
+pipeline_user = "arn:aws:iam::960351580303:user/aws-sam-cli-managed-cicd-dev-pipeline-PipelineUser-15JU6M579DER0"
 permissions_provider = "AWS IAM"
 
-[dev-test-vg]
-[dev-test-vg.pipeline_bootstrap]
-[dev-test-vg.pipeline_bootstrap.parameters]
-pipeline_execution_role = "arn:aws:iam::960351580303:role/aws-sam-cli-managed-dev-test-PipelineExecutionRole-CQ6EB964PSJA"
-cloudformation_execution_role = "arn:aws:iam::960351580303:role/aws-sam-cli-managed-dev-t-CloudFormationExecutionR-1PKHNEW3WWAUT"
-artifacts_bucket = "aws-sam-cli-managed-dev-test-vg-p-artifactsbucket-1vdqqlq0xvsj9"
+[cicd-dev]
+[cicd-dev.pipeline_bootstrap]
+[cicd-dev.pipeline_bootstrap.parameters]
+pipeline_execution_role = "arn:aws:iam::960351580303:role/aws-sam-cli-managed-cicd-dev-PipelineExecutionRole-13552AUY2ODPG"
+cloudformation_execution_role = "arn:aws:iam::960351580303:role/aws-sam-cli-managed-cicd-CloudFormationExecutionR-ZW07FEBFMIWX"
+artifacts_bucket = "aws-sam-cli-managed-cicd-dev-pipe-artifactsbucket-1sjnbeg00vkp3"
+image_repository = ""
+region = "ap-south-1"
+
+[cicd-prod]
+[cicd-prod.pipeline_bootstrap]
+[cicd-prod.pipeline_bootstrap.parameters]
+pipeline_execution_role = "arn:aws:iam::960351580303:role/aws-sam-cli-managed-cicd-pro-PipelineExecutionRole-1P02SAL4SACRW"
+cloudformation_execution_role = "arn:aws:iam::960351580303:role/aws-sam-cli-managed-cicd-CloudFormationExecutionR-17761SSYG3L60"
+artifacts_bucket = "aws-sam-cli-managed-cicd-prod-pip-artifactsbucket-9zfilsgjbq6n"
 image_repository = ""
 region = "ap-south-1"
